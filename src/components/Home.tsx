@@ -1,9 +1,9 @@
-import img from "../assets/bg.png";
+import img from "../assets/file.png";
 function Home() {
   return (
     <>
-      <div className="bg-[#e3edf6] banner mt-4">
-        <div className="py-4 px-8 container grid md:grid-cols-2 oy-8 w-full">
+      <div className="bg-[#e3edf6] banner mt-4 bg-[url('../assets/bg.png)]">
+        <div className="py-4 px-18 container grid md:grid-cols-2 oy-8 w-full">
           <div className="flex items-center">
             <div className="max-w-[450px] space-y-4 bg-white p-4 rounded-bg shadow">
               <h2 className="text-headingFirst font-bold text-3xl md:text-4xl">
@@ -23,6 +23,9 @@ function Home() {
                 Shop Now
               </a>
             </div>
+          </div>
+          <div className="w-full">
+            <img src={img} alt="" />
           </div>
         </div>
       </div>

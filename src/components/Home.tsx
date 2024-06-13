@@ -1,4 +1,4 @@
-import img from "../assets/file.png";
+import img from "../assets/img/file.png";
 function Home() {
   return (
     <>

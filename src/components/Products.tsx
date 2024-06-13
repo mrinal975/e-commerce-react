@@ -19,6 +19,7 @@ function Products() {
       title: "Product 1",
       img: img1,
       price: 100,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -26,6 +27,7 @@ function Products() {
       title: "Product 2",
       img: img2,
       price: 200,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -33,6 +35,7 @@ function Products() {
       title: "Product 3",
       img: img3,
       price: 300,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -40,6 +43,7 @@ function Products() {
       title: "Product 4",
       img: img4,
       price: 400,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -47,6 +51,7 @@ function Products() {
       title: "Product 5",
       img: img5,
       price: 500,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -54,6 +59,7 @@ function Products() {
       title: "Product 6",
       img: img6,
       price: 600,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -61,6 +67,7 @@ function Products() {
       title: "Product 7",
       img: img7,
       price: 700,
+      category: "Phone",
       quantity: 1,
     },
 
@@ -69,6 +76,7 @@ function Products() {
       title: "Product 9",
       img: img9,
       price: 600,
+      category: "Phone",
       quantity: 1,
     },
     {
@@ -76,6 +84,7 @@ function Products() {
       title: "Product 10",
       img: img10,
       price: 500,
+      category: "Phone",
       quantity: 5,
     },
     {
@@ -83,6 +92,7 @@ function Products() {
       title: "Product 11",
       img: img11,
       price: 900,
+      category: "Phone",
       quantity: 3,
     },
     {
@@ -90,11 +100,12 @@ function Products() {
       title: "Product 12",
       img: img12,
       price: 900,
+      category: "Phone",
       quantity: 10,
     },
   ];
   return (
-    <div className="container mt-32">
+    <div className="container mt-32 mx-auto px-4">
       <div className="sm:flex justify-between items-center">
         <h2 className="text-4xl font-medium">Products</h2>
         <div className="text-gray-500 flex gap-4 text-xl mt-4 sm:mt-0">
@@ -111,6 +122,7 @@ function Products() {
             img={item.img}
             price={item.price}
             quantity={item.quantity}
+            category={item.category}
           />
         ))}
       </div>

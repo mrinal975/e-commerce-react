@@ -46,14 +46,7 @@ function Products() {
       category: "Phone",
       quantity: 1,
     },
-    {
-      id: 5,
-      title: "Product 5",
-      img: img5,
-      price: 500,
-      category: "Phone",
-      quantity: 1,
-    },
+
     {
       id: 6,
       title: "Product 6",

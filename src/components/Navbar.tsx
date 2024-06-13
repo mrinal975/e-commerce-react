@@ -2,7 +2,7 @@ import { CiUser, CiShoppingCart } from "react-icons/ci";
 import { useAppSelector } from "../redux/hooks";
 // import {store}
 
-function Navbar() {
+function Navbar({ setOpenCart }: any) {
   const count = useAppSelector((store) => store.cart.length);
   return (
     <div className="top-0 sticky bg-white">
@@ -23,7 +23,10 @@ function Navbar() {
                 </a>
               </div>
             </div>
-            <div className="text-gray-500 text-3xl relative cursor-pointer">
+            <div
+              onClick={() => setOpenCart(true)}
+              className="text-gray-500 text-3xl relative cursor-pointer"
+            >
               <CiShoppingCart />
               <div className="absolute -top-3 -right-2 bg-red-500 rounded-full text-white text-sm w-5 h-5 flex justify-center items-center">
                 {count}

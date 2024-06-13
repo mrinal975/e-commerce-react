@@ -12,7 +12,13 @@ interface PropsType {
   quantity: number;
 }
 function ProductCart({ id, title, img, price, quantity }: PropsType) {
-  return <div></div>;
+  return (
+    <div className="border border-gray-200">
+      <div className="text-center border-b border-gray-200">
+        <img src={img} alt="" className="inline-block" />
+      </div>
+    </div>
+  );
 }
 
 export default ProductCart;

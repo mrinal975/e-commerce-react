@@ -63,13 +63,7 @@ function Products() {
       price: 700,
       quantity: 1,
     },
-    {
-      id: 8,
-      title: "Product 8",
-      img: img8,
-      price: 800,
-      quantity: 1,
-    },
+
     {
       id: 9,
       title: "Product 9",

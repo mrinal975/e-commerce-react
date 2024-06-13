@@ -11,6 +11,7 @@ import img9 from "../assets/img/9.jpeg";
 import img10 from "../assets/img/10.jpeg";
 import img11 from "../assets/img/11.jpeg";
 import img12 from "../assets/img/12.jpeg";
+import ProductCart from "./ProductCart";
 function Products() {
   const data = [
     {
@@ -73,29 +74,54 @@ function Products() {
       id: 9,
       title: "Product 9",
       img: img9,
-      price: 900,
+      price: 600,
       quantity: 1,
     },
     {
       id: 10,
       title: "Product 10",
       img: img10,
+      price: 500,
       quantity: 5,
     },
     {
       id: 11,
       title: "Product 11",
       img: img11,
+      price: 900,
       quantity: 3,
     },
     {
       id: 12,
       title: "Product 12",
       img: img12,
+      price: 900,
       quantity: 10,
     },
   ];
-  return <div></div>;
+  return (
+    <div className="container mt-32">
+      <div className="sm:flex justify-between items-center">
+        <h2 className="text-4xl font-medium">Products</h2>
+        <div className="text-gray-500 flex gap-4 text-xl mt-4 sm:mt-0">
+          <div className="">Featured</div>
+          <div className="">Top Seller</div>
+        </div>
+      </div>
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-col-4 mt-8">
+        {data.map((item, index) => (
+          <ProductCart
+            key={index}
+            id={item.id}
+            title={item.title}
+            img={item.img}
+            price={item.price}
+            quantity={item.quantity}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Products;

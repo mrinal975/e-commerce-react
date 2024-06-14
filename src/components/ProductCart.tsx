@@ -4,6 +4,8 @@ import {
   AiOutlineStar,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import { useAppDispatch } from "../redux/hooks";
+import { addToCart } from "../redux/slice/cartSlice";
 interface PropsType {
   id: number;
   title: string;
@@ -13,6 +15,12 @@ interface PropsType {
   quantity: number;
 }
 function ProductCart({ id, title, category, img, price, quantity }: PropsType) {
+  const dispatch = useAppDispatch();
+  const addProductToCart = () => {
+    const payload = { id, title, category, img, price, quantity };
+    console.log(payload);
+    dispatch(addToCart(payload));
+  };
   return (
     <div className="border border-gray-200">
       <div className="text-center border-b border-gray-200 ">
@@ -38,7 +46,10 @@ function ProductCart({ id, title, category, img, price, quantity }: PropsType) {
             <h2 className=" font-medium text-sky-500"> ${price}</h2>
           </div>
         </div>
-        <div className="flex w-full gap-x-3 justify-center rounded-lg item-center bg-sky-500 text-white mt-4 px-4 py-2 cursor-pointer hover:bg-sky-600">
+        <div
+          onClick={addProductToCart}
+          className="flex w-full gap-x-3 justify-center rounded-lg item-center bg-sky-500 text-white mt-4 px-4 py-2 cursor-pointer hover:bg-sky-600"
+        >
           <AiOutlineShoppingCart className="text-2xl" />
           Add to cart
         </div>

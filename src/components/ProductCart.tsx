@@ -18,7 +18,6 @@ function ProductCart({ id, title, category, img, price, quantity }: PropsType) {
   const dispatch = useAppDispatch();
   const addProductToCart = () => {
     const payload = { id, title, category, img, price, quantity };
-    console.log(payload);
     dispatch(addToCart(payload));
   };
   return (

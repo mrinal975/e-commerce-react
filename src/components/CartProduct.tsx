@@ -23,7 +23,7 @@ function CartProduct({ id, title, category, img, price, quantity }: PropsType) {
           <p className="text-gray-600 text-sm">{quantity * newPrice}</p>
         </div>
         <RxCross1
-          onAbort={() => dispatch(removeProduct(id))}
+          onClick={() => dispatch(removeProduct(id))}
           className="cursor-pointer"
         />
       </div>

@@ -3,7 +3,7 @@ import { useAppSelector } from "../redux/hooks";
 import { RxCross1 } from "react-icons/rx";
 import CartProduct from "./CartProduct";
 function Cart({ setOpenCart }: any) {
-  const products = useAppSelector((state) => state.cart);
+  const products = useAppSelector((store) => store.cart);
   const getTotal = () => {
     let total = 0;
     products.forEach((item: any) => {

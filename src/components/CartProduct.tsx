@@ -22,11 +22,11 @@ function CartProduct({ id, title, category, img, price, quantity }: PropsType) {
           <h2 className="font-medium">{title}</h2>
           <p className="text-gray-600 text-sm">{quantity * newPrice}</p>
         </div>
-        <RxCross1
-          onClick={() => dispatch(removeProduct(id))}
-          className="cursor-pointer"
-        />
       </div>
+      <RxCross1
+        onClick={() => dispatch(removeProduct(id))}
+        className="cursor-pointer"
+      />
     </div>
   );
 }
